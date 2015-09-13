@@ -1,0 +1,15 @@
+.right_inp p {padding: 30px 30px 0;}
+
+.right_inp {overflow: hidden;}
+
+.right_inp p .b_size {font-size: 100%; line-height: 1em}
+
+.underhead .menu {margin-left: -3px; border-left: 3px solid #393434;}
+
+.right_side, .floater {position: relative;}
+
+.right_side {margin-bottom: 0; padding-bottom: 0;}
+
+.inform p, .right_side p {padding: 15px 20px 30px;}
+
+#content h2, #content h3 {padding: 36px 15px 0;}

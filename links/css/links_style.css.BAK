@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic);
+/* https://www.google.com/fonts/#QuickUsePlace:quickUse */
+
+
+/* reset */
+html,
+body,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+
+
+/* global */
+body {
+	background-color: #18181f;
+	color: #f5eee2;
+	font-family: 'Open Sans', Tahoma, sans-serif;
+	font-size: 18px;
+	line-height: 1.25;
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+
+/* controll-block */
+.page-nav {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 171px;
+	padding-top: 30px;
+}
+
+.page-nav label {
+	display: block;
+	cursor: pointer;
+	margin-bottom: 10px;
+	padding-left: 40px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.page-nav label.active {
+	background-color: #323844;
+	border: 1px solid #565c68;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+input[name="links"],
+.main-bl {
+	display: none;
+}
+
+input[name="links"]:checked + .main-bl {
+	display: block;
+}
+
+
+/* filter-block */
+.filter {
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	bottom: 0;
+	left: 170px;
+	width: 210px;
+	padding: 45px 5px 0 40px;
+	background-color: #323844;
+	border: 1px solid #565c68;
+	border-top: none;
+	border-bottom: none;
+}
+
+.filter li {
+	margin-bottom: 16px;
+}
+
+.filter li:first-child {
+	margin-bottom: 18px;
+	margin-left: -0.3em;
+}
+
+.filter li a {
+	display: block;
+}
+
+.filter li a:before {
+	content: ' ';
+	display: inline;
+	font-size: 70%;
+	vertical-align: 15%;
+	margin-right: 0.6em;
+	margin-left: 0.4em;
+	border-left: 4px solid #e1cfa9;
+}
+
+.filter li a.active:before {
+	border-color: #E19900;
+}
+
+
+/* links-block */
+.main-bl {
+	margin-left: 435px;
+	padding-top: 35px;
+}
+
+.links-list {
+	line-height: 1.8;
+	word-spacing: 5000px;
+}
+
+.links-list a {
+	display: inline-block;
+	word-spacing: normal;
+	margin-bottom: 1em;
+}
+
+.links-list a::first-line,
+.links-list a.filtered-el {
+	color: rgba(255,255,255,0.4)
+}
+
+.links-list a:not(.filtered-el):hover::first-line {
+	color: inherit;
+	box-shadow: 0 1px #f5eee2;
+	white-space: nowrap;
+}

@@ -1,0 +1,22 @@
+/* IE9- style */
+.srch-holiday select {
+    background-image: none;
+}
+
+.srch-country input[name="search"] {
+    background: #fff url(../images/ie_placeholder.png) no-repeat 5px 0;
+}
+
+.subscription input[name="email"] {
+    background: #fff url(../images/ie_placeholder.png) no-repeat 5px -40px;
+}
+
+.subscription input[name="name"] {
+    background: #fff url(../images/ie_placeholder.png) no-repeat 5px -80px;
+}
+
+.srch-country input[name="search"]:focus,
+.subscription input[name="email"]:focus,
+.subscription input[name="name"]:focus {
+    background-image: none;
+}

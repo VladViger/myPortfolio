@@ -1,0 +1,15 @@
+
+@font-face {
+  font-family: 'Cabin Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cabin Condensed'), local('CabinCondensed'), url(http://themes.googleusercontent.com/static/fonts/cabincondensed/v4/B0txb0blf2N29WdYPJjMShZ1gqmQBTb4Nwa_fF0DajA.woff) format('woff');
+}
+
+
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu Condensed'), local('UbuntuCondensed-Regular'), url(http://themes.googleusercontent.com/static/fonts/ubuntucondensed/v3/DBCt-NXN57MTAFjitYxdrFzqCfRpIA3W6ypxnPISCPA.woff) format('woff');
+}

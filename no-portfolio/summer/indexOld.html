@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/sun_2.ico" type="image/x-icon">
+    <title>Summer Holiday</title>
+    <!--[if lt IE 9]>
+        <style>
+            body{background-image: url(images/kokos-kr-pn.jpg);}
+            body>*{display:none;}
+            body:before{content: 'IE 8 and younger are not supported ...';position: fixed;
+                top: 75px;left: 110px;font: 36px Arial, sans-serif;color: #fff;}
+        </style>
+    <![endif]-->
+</head>
+<body>
+    <div class="counter-wrap" id="counter-time">
+        <h1>До отпуска осталось:</h1>
+        <p>
+            <span id="day">-</span><br>дней
+        </p>
+        <p>
+            <span id="hours">-</span><br>часов
+        </p>
+        <p>
+            <span id="minutes">-</span><br>минут
+        </p>
+        <p>
+            <span id="second">-</span><br>секунд
+        </p>
+        <div class="preved">
+            Привет от Megoega!
+        </div>
+    </div>
+    <script>
+        function openingDateCounter(endYear, endMonth, endDate, endHour, endMin, endSec) {
+            var openingDate = new Date();
+            openingDate.setFullYear(endYear);
+            openingDate.setMonth(endMonth - 1);
+            openingDate.setDate(endDate);
+            openingDate.setHours(endHour);
+            openingDate.setMinutes(endMin);
+            openingDate.setSeconds(endSec);
+
+            var elemDays = document.getElementById('day');
+            var elemHours = document.getElementById('hours');
+            var elemMin = document.getElementById('minutes');
+            var elemSec = document.getElementById('second');
+
+            function counting() {
+                var nowDate = new Date();
+                var diff, diffDays, diffHours, diffMin, diffSec;
+
+                diff = (openingDate - nowDate)/1000;
+                if (diff < 0) {
+                    clearInterval(timerId);
+                    return;
+                }
+
+                diffDays = Math.floor(diff/86400);
+                diffHours = Math.floor( (diff - diffDays*86400)/3600 );
+                diffMin = Math.floor( (diff- diffDays*86400 - diffHours*3600)/60 );
+                diffSec = Math.floor(diff - diffDays*86400 - diffHours*3600 - diffMin*60);
+
+                elemDays.innerHTML = diffDays;
+                elemHours.innerHTML = diffHours;
+                elemMin.innerHTML = diffMin;
+                elemSec.innerHTML = diffSec;
+            }
+
+            var timerId = setInterval( function() {counting()}, 200);
+        }
+
+        openingDateCounter(2015, 7, 10, 16, 30, 0);
+    </script>
+</body>
+</html>

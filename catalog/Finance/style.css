@@ -1,0 +1,92 @@
+/* border: 1px solid red */
+
+html, body {height: 100%;}
+body, html, h1, h2, h3, ul, p {margin: 0; padding: 0;}
+img {border: none;}
+a {outline: none;}
+
+.orange {color: #ff5a00;}
+.gray {color: #7e7a7a;}
+
+
+/* block */
+#layout {min-height: 100%; position: relative; font-family: arial, sans-serif; font-size: 62.5%; background: #fff; color: #7e7a7a;
+         /*margin: 0 20px; border-left: 1px solid #3e3a3a; border-right: 1px solid #3e3a3a;*/  overflow: hidden; min-width: 780px;}
+
+#header {border-top: 14px solid #7e7a7a; height: 90px;}
+#content {}
+
+#hfooter {height: 71px; clear: both;}
+#footer {background: #838080; height: 70px; border-top: 1px solid #3e3a3a; position: absolute; width: 100%; bottom: 0;}
+
+
+/* header */
+h1 {position: absolute;}
+h1 a {font-size: 52px; line-height: 90px; text-transform: uppercase; font-family: Arial Narrow, 'Cabin Condensed', arial;
+      margin-left: 20px; padding-left: 48px; background: url(image/h1_bg.png) 0% 50% no-repeat; color: #072176;}
+h1 a, h2 a, h3 a {text-decoration: none;}
+
+#header table {width: 100%; height: 100%; text-align: center;}
+#header th {width: auto; min-width: 140px; text-align: left; font-size: 120%; padding-left: 292px;}
+#header td {white-space: nowrap; width: 18%}
+
+#header td a {font-size: 130%; color: #7e7a7a; font-weight: bold; text-decoration: none;}
+#header td span {text-decoration: underline; color: #c3c1c1;}
+
+#header td a:hover {color: #ff5a00;}
+#header td span:hover {color: #ffa777;}
+#header td img {vertical-align: -0.5em; padding-right: 1em; background-color: #fff;}        /*менять с фоном!*/
+
+#header .helper {position: absolute; right: 0; top: 0; color: #eee; padding: 0 1%; font-size: 10px; line-height: 14px;}
+
+
+/* content */
+.inform p, .right_side p {font-size: 130%; line-height: 140%; padding: 15px 4% 30px;}
+.inform p {padding-bottom: 0;}
+#content h2, #content h3 {padding: 36px 4% 0; font-size: 200%; text-transform: uppercase; color: #322e2e; 
+                          font-family: Arial Narrow, calibri, 'Cabin Condensed', arial;}
+#content h2 a, #content h3 a {color: #428cdb;}
+#content h2 a:hover {color: #322e2e;}
+
+.underhead, .inform {margin-right: 30%;}
+.underhead, .right_inp, .menu, .bg_menu {height: 286px;}
+.right_inp {position: absolute; right: 0; width: 30%;}
+.right_side {width: 30%; float: right;}
+
+/*---*/
+.right_inp {background: #40425e; border-right: 1px solid #40425e;}
+.right_inp p {font-size: 230%; color: #fff; text-align: center; padding: 12% 7% 0;}
+.right_inp .after_inp {position: absolute; bottom: 0; width: 100%; background: #50536e url(image/inp_bg.png) repeat-x; padding: 0;}
+.after_inp span {color: #b9bac9;}
+.after_inp a {text-decoration: none; padding-left: 32px; background: url(image/inp_a2.png) no-repeat; line-height: 58px;
+              color: #b9bac9;}
+.after_inp a:hover {text-decoration: underline; color: #74758d;}
+.right_inp p .b_size {font-size: 140%; vertical-align: middle; line-height: 10%}
+
+/*---*/
+.underhead .menu {width: 34%; float: right; background: #393434 url(image/bg_menu_r.gif);}
+.underhead .bg_menu {background: url(image/bg_menu.jpg) right no-repeat; margin-right: 34%;}
+
+.menu ul {margin: 60px 0 0 11%; list-style: none;}
+.menu a {font-size: 180%; color: #fff; text-decoration: none; line-height: 150%; padding: 0 4px 0 27px;
+         background: url(image/li_bg.png) 0px 50% no-repeat; white-space: nowrap;}
+.menu a:hover {background: url(image/li_bg.png) -682px 50% no-repeat; color: #ff5a00;}
+
+.light {position: absolute; width: 100%; background-color: rgba(210, 220, 255, 0.22); height: 16px; top: 105px;}
+
+/*---*/
+.right_side {background: #f0f0f0 url(image/rcol_bg.png) repeat-x; /*bottom: 0; top: 390px;*/ border-left: 1px solid #cecece;
+             margin-bottom: -1000px; padding-bottom: 1000px;}
+.right_side p {border-bottom: 1px solid #e8e8e8; margin-bottom: -1px;}
+
+/*---*/
+.inform {background: url(image/info_bg.png) repeat-x;}
+.floater {float: right; width: 50%; padding-bottom: 30px;}
+.floater h2, .floater h3 {margin-left: 5%}
+.inform img {border: 1px solid #949292; max-width: 99%;}
+
+.inform a {color: #428cdb; text-decoration: none;}
+.inform .under:hover {color: #a9c9e2; text-decoration: underline;}
+
+/* footer */
+#footer p {text-align: center; color: #fff; font-size: 120%; line-height: 70px;}

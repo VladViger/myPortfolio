@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		(function(){
+		    function addFont() {
+		        var style = document.createElement('style');
+		        style.rel = 'stylesheet';
+		        document.head.appendChild(style);
+		        style.textContent = localStorage.LatoBasicLatin;
+		    }
+
+		    try {
+		        if (localStorage.LatoBasicLatin) {
+		            addFont();
+		        } else {
+		            var request = new XMLHttpRequest();
+		            request.open('GET', 'css/Lato.css', true);
+		            request.onload = function() {
+		                if (request.status >= 200 && request.status < 400) {
+		                    localStorage.LatoBasicLatin = request.responseText;
+		                    addFont();
+		                }
+		            }
+		            request.send();
+		        }
+		    } catch(ex) { }
+		}());
+	</script>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<link rel="stylesheet" href="css/ie8.css">
+	<![endif]-->
+	<title>Hexal</title>
+</head>
+<body>
+	<header class="main-header">
+		<nav>
+			<div class="left-part">
+				<a href="index.html" class="active">Portfolio</a>
+				<a href="#n2">About</a>
+			</div>
+			<div class="logo">
+				<img src="images/logo.png" alt="home">
+			</div>
+			<div class="right-part">
+				<a href="#n3">Blog</a>
+				<a href="#n4">Get in touch</a>
+			</div>
+		</nav>
+	</header>
+	<div class="portfolio-jobs">
+		<div class="line-horiz"></div>
+		<div class="hexa-row">
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/1-mountainous-landscape-kr.jpg" alt="">
+						<figcaption>
+							<a href="http://vangogh-world.ru/land/mountainous-landscape.jpg">Mountainous Landscape</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/17-farmhouses-among-trees.jpg" alt="">
+						<figcaption>
+							<a href="http://uploads8.wikiart.org/images/vincent-van-gogh/farmhouses-among-trees-1883(1).jpg">Farmhouse Among Trees</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/3-van-gogh-ear-portrait.jpg" alt="">
+						<figcaption>
+							<a href="http://www.artscroll.ru/Images/2008/v/Vincent%20van%20Gogh/000400.jpg">Self-Portrait with Bandaged</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/4-starry-night-over-the-rhone.jpg" alt="">
+						<figcaption>
+							<a href="http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Starry_Night_Over_the_Rhone.jpg/1280px-Starry_Night_Over_the_Rhone.jpg">Starry Night Over the Rhone</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="hexa-row">
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/2-VanGogh-Irises_2.jpg" alt="">
+						<figcaption>
+							<a href="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/VanGogh-Irises_2.jpg/1280px-VanGogh-Irises_2.jpg">Vase with Irises</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/6-gogh_dr_gachet.jpg" alt="">
+						<figcaption>
+							<a href="http://upload.wikimedia.org/wikipedia/commons/1/1e/Portrait_of_Dr._Gachet.jpg">Portrait of Doctor Gachet</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/7-VanGogh-starry_night.jpg" alt="">
+						<figcaption>
+							<a href="http://upload.wikimedia.org/wikipedia/commons/c/cd/VanGogh-starry_night.jpg">Starry Night</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/8-two-cut-sunflowers.jpg" alt="">
+						<figcaption>
+							<a href="http://www.chinaoilpaintinggallery.com/oilpainting/Vincent-van-Gogh/Two-Cut-Sunflowers-1.jpg">Two Cut Sunflowers</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/9-Self-Portrait.jpg" alt="">
+						<figcaption>
+							<a href="http://upload.wikimedia.org/wikipedia/commons/6/6b/SelbstPortrait_VG2.jpg">Self-Portrait</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="hexa-row">
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/10-wheat-fields-with-reaper.jpg" alt="">
+						<figcaption>
+							<a href="http://www.vggallery.com/painting/f_0618.jpg">Wheat Fields with Reaper at Sunrise</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/11-self-portrait-with-bandaged.jpg" alt="">
+						<figcaption>
+							<a href="https://upload.wikimedia.org/wikipedia/commons/f/f0/VanGogh-self-portrait-with_bandaged_ear.jpg">Self-Portrait with Bandaged Ear</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/12-almond_blossom.jpg" alt="">
+						<figcaption>
+							<a href="http://uploads5.wikiart.org/images/vincent-van-gogh/branches-with-almond-blossom-1890(1).jpg">Almond Blossoms</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+
+			<div class="hexa-wrap-1">
+				<div class="hexa-wrap-2">
+					<figure class="hexa-bg">
+						<img src="images/hexaImg/13-Van_Gogh_-_Felshügel_mit_Eiche.jpg" alt="">
+						<figcaption>
+							<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Van_Gogh_-_Felsh%C3%BCgel_mit_Eiche.jpeg/1198px-Van_Gogh_-_Felsh%C3%BCgel_mit_Eiche.jpeg">Rocks with Oak Tree</a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div id="carousel-control" title="options to future">
+			<span></span>
+			<span class="active"></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="line-horiz"></div>
+	</div><!-- portfolio-gobs end -->
+	<div class="author-about">
+		<div class="wrap">
+			<div class="hexa-wrap-1 author-img">
+				<div class="hexa-wrap-2">
+					<div class="hexa-bg">
+						<img src="images/hexaImg/vincent_photo.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			
+			<h1>Vincent van Gogh</h1>
+			<p class="descr">Post-Impressionist painter</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, magnam, similique, quaerat, cupiditate voluptas saepe dolore consectetur odio deleniti ratione nesciunt laudantium error obcaecati nihil molestias quo quae cumque. Laboriosam, aspernatur, eius commodi voluptas eum quo cumque eaque vitae porro consectetur quas expedita harum consequuntur voluptate quaerat. Rem, fugiat aliquid.</p>
+
+			<div class="soc-links clearfix">
+				<a href="#fb" class="fb" title="Facebook"></a>
+				<a href="#tw" class="tw" title="Twitter"></a>
+				<a href="#gp" class="gp" title="Google Plus"></a>
+				<a href="#pi" class="pi" title=""></a>
+				<a href="#ln" class="ln" title="Linkedin"></a>
+				<a href="#db" class="db" title=""></a>
+			</div>
+		</div><!-- author-about-wrap-end -->
+	</div>
+	<div class="contacts">
+		<div class="line-horiz"></div>
+		<div class="wrap clearfix">
+			<aside class="info-bar">
+				<p>
+					<b>Quisque Henderit:</b>&nbsp; purus Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum omnis numquam pariatur vero ipsa magni facilis labore assumenda esse dolor.
+				</p>
+				<p class="cont location">Elm St. 14/08 Lost City</p>
+				<p class="cont tell">+2538 331 87 65</p>
+				<p class="cont email"><a href="mailto:Van-V@Gog.ro">Van-V@Gog.ro</a></p>
+			</aside>
+
+			<h2>Get In Touch</h2>
+			<p class="descr">In order to get in touch use the contact form below:</p>
+			<form action="index.html" name="userContact">
+				<input type="text" name="userName" placeholder="Name (Required)" required>
+				<input type="email" name="userEmail" placeholder="Email (Required)" required>
+				<input type="text" name="subj" placeholder="Subject">
+				<textarea name="message" placeholder="Write your message here..."></textarea>
+				<input type="submit" value="SEND" class="subm">
+			</form>
+		</div>
+		<div class="line-horiz"></div>
+	</div>
+	<div class="copyright">
+		<p>© 2015. This tamplate was used for training. Coded by <a href="http://free-web-portfolio.890m.com/">Vlad.V</a></p>
+	</div>
+	<script src="js/my_js.js"></script>
+	<!--[if lt IE 10]>
+		<script src="js/placeholder.js"></script>
+	<![endif]-->
+</body>
+</html>

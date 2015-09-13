@@ -1,0 +1,88 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+
+/* reset style */
+body, html, p, ul, ol, dl, h1, h2, h3 {margin: 0; padding: 0;}
+img {border: none;}
+a {outline: none;}
+
+/* -- layer-style -- */
+.layout {max-width: 1280px; min-width: 1260px; margin: 0 auto; background: #414141;}
+.header, .poster, .main, .footer {padding: 0 130px;}
+
+/* header */
+.header {height: 66px; background: #fff;}
+
+.header .site-name {display: inline-block; line-height: 66px; margin: 0 22px; font-size: 32px; font-weight: 300;}
+.site-name span.col-blue-1 {font-weight: bold;}
+.site-name a {text-decoration: none; color: inherit;}
+
+.header .nav {float: right; list-style-type: none; margin: 0 12px;}
+.header .nav li {display: inline-block; line-height: 34px; margin: 16px 8px;} /*full haight: 66px*/
+.header .nav a {color: inherit; text-decoration: none; display: block; padding: 0 12px; font-size: 16px;}
+
+.header .nav a:hover, .header .nav .current {background: #1784d1; border-radius: 4px; color: #fff;
+	background: linear-gradient(to top, #1f84e7, #37b3f8); box-shadow: inset 0 0 0 1px #1784d1, inset 0 4px 0 -2px #74cbfa;}
+.current a:hover {cursor: default;}
+
+/* poster */
+.poster {height: 534px; background: #61b4e9 url(images/poster_panda.jpg) 50% 0 no-repeat; 
+	box-shadow: inset 0 15px 10px -15px rgba(0,0,0,0.4);}
+
+.poster p {text-align: center; color: #fff;}
+
+.poster-question {padding-top: 150px; text-transform: uppercase; font-size: 52px; line-height: 1.2;
+	text-shadow: 0 0 7px rgba(0,0,0,0.2);}
+.poster-question span {font-weight: 300;}
+
+.poster-answer {padding-top: 36px;}
+.poster-answer a {color: inherit; text-decoration: none; font-weight: bold; font-size: 32px; display: inline-block; 
+	padding: 0 57px; line-height: 58px; box-shadow: 0 0 0 6px rgba(0,0,0,0.12), inset 0 2px 0 -1px #6feb55; background: #51C03D; 
+	background: linear-gradient(to top, #34ae22, #6ed258); border-radius: 5px; text-shadow: 0 0 6px rgba(0,0,0,0.25);}
+
+.poster-answer a:active {background: linear-gradient(to bottom, #34ae22, #6ed258);}
+
+/* main */
+.main {min-height: 568px; background: #ececec; position: relative;}
+  /*gallery*/
+.gallery {margin: 0 auto; height: 238px; width: 430px; padding: 0 25px; background: #fff; border-radius: 4px; 
+	border-bottom: 7px solid #4ec23b; position: relative; top: -96px; margin-bottom: -96px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.25);}
+.gallery h2 {text-align: center; font-size: 22px; font-weight: 300; text-transform: capitalize; padding: 18px 0;}
+
+.gallery-list {list-style-type: none; overflow: auto;}
+.gallery-list li {float: left; padding: 3px 4px;}
+.gallery-list img {display: block; width: 100%;}
+.gallery-list a {text-decoration: none; color: inherit; font-size: 14px; line-height: 30px;
+	width: 78px; display: block; overflow: hidden; text-overflow: ellipsis;}
+
+.gallery-list a:hover img {opacity: 0.4; transition-duration: 0.5s;}
+  /*main-text*/
+.main-text {text-align: center; font-size: 26px; margin-top: 56px; font-weight: 300;}
+.main-text-lesser {font-size: 85%;}
+  /*main-link*/
+.main-link {list-style-type: none; text-align: center; margin-top: 50px;}
+.main-link li {display: inline-block; font-size: 20px; vertical-align: top;}
+
+.main-link a {display: block; width: 133px; height: 133px; border-radius: 50%; margin: 0 35px 15px;
+	background-color: #fff; background-position: 50% 50%; background-repeat: no-repeat;}
+.main-link a.ml-li1 {background-image: url(images/ico-big-1.png);}
+.main-link a.ml-li2 {background-image: url(images/ico-big-2.png);}
+.main-link a.ml-li3 {background-image: url(images/ico-big-3.png);}
+.main-link a.ml-li4 {background-image: url(images/ico-big-4.png);}
+
+.main-link li span {display: inline-block; max-width: 200px; word-wrap: break-word;} /* max-width depends on the <a> width */
+
+/* footer */
+.footer {height: 32px;}
+.footer p {text-align: center; line-height: 32px; font-size: 14px;}
+
+/* -- global style -- */
+.col-blue-1 {color: #1298dd;}
+
+/* fonts */
+.layout {color: #8d8d8d; font-family: 'Oxygen', Arial, sans-serif;}
+
+@media screen and (max-width: 1024px) {
+.layout {width: 1024px;}
+.header, .poster, .main, .footer {padding: 0 2px;}
+}

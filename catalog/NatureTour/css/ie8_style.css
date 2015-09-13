@@ -1,0 +1,30 @@
+/* IE8 only style */
+
+.megabutton {
+    display: block;
+    width: 100%;
+}
+
+.megabutton .angle-wrap {
+    display: none;
+}
+
+.megabutton .shost {
+    width: auto;
+}
+
+.carousel-caption {
+    right: 0 !important;
+    left: 50% !important;
+    background-color: #555;
+}
+
+@media (min-width: 992px) {
+    .carousel-caption {
+        left: 66.66% !important;
+    }
+}
+
+.my-nav > li > a:hover {
+    text-decoration: underline;
+}

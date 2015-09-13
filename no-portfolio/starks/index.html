@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+        <style>.adress-label .logo{width: 100%; margin: -30px auto -15px;}</style>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Starks</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="main-nav">
+                <ul>
+                    <li class="accent"><a href="#sec1">получить stark's card</a></li>
+                    <li><a href="#sec2">почему мы?</a></li>
+                    <li><a href="#sec3">наши преймущества</a></li>
+                    <li><a href="#sec4">о ресторане</a></li>
+                    <li><a href="#sec5">схема проезда</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="main" id="sec1">
+            <div class="row-logo">
+                <a href="index.html" class="logo" title="Home"><img src="images/logo-pn.png" alt="Starks"></a>
+                <p class="slogan">Ресторан быстрого питания<br><span>Вкусно! Быстро! Полезно!</span></p>
+                <p class="tell">+7(391) 200-200-7</p>
+            </div>
+            <h1>4 июля<br><span>открытие нового ресторана Stark's!</span></h1>
+            <p class="note-bonus">Всего 5 000 бонусных карт!</p>
+            <div class="counter-wrapper">
+                <div class="tablet">
+                    <div class="counter-time" id="counter-time">
+                        До открытия
+                        <p><span id="day">0</span><br>дней</p>
+                        <p><span id="hours">0</span><br>часов</p>
+                        <p><span id="minutes">0</span><br>минут</p>
+                        <p><span id="second">0</span><br>секунд</p>
+                    </div>
+                    <div class="counter-cards" id="counter-cards">
+                        Осталось
+                        <p>2</p>
+                        <p>8</p>
+                        <p>4</p>
+                        <p>9</p>
+                        карт
+                    </div>
+                </div>
+            </div>
+            <div class="row-form-wr">
+                <div class="request-faq">
+                    <p>Заполни заявку на получение бонусной карты Stark's и получи:</p>
+                    <ul class="bonus-list">
+                        <li>1. Вкусный подарок</li>
+                        <li>2. Скидки до 40% на напитки</li>
+                        <li>3. Участие в программе &laquo;7 + Подарок&raquo;</li>
+                        <li>4. Подарки на Дни рождения и праздники</li>
+                    </ul>
+                </div>
+                <div class="request-form">
+                    <form action="index.html" method="post" name="card-request">
+                        <p>Оставте заявку прямо сейчас и получите бонусную карту Stark's</p>
+
+                        <label for="name">Ф.И.О.</label>
+                        <input type="text" name="name" id="name" required>
+
+                        <label for="email">Электронная почта</label>
+                        <input type="email" name="email" id="email" required>
+
+                        <label for="tel-country-index">Телефон</label>
+                        <input type="text" name="tel-country-index" maxlength="2" class="tel-group t1" pattern="[0-9_\+]*" value="+7" id="tel-country-index">
+                        <input type="text" name="tel-operator-index" maxlength="3" class="tel-group t2" pattern="[0-9]*">
+                        <input type="text" name="tel-abonent-index" maxlength="9" class="tel-group t3" pattern="[0-9_-]*">
+
+                        <input type="submit" value="Получить карту" class="r-f-button">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="why-us" id="sec2">
+            <h2>Почему вам нужно нас посетить</h2>
+            <div class="video-frame">
+                <iframe src="https://player.vimeo.com/video/126747807?badge=0" frameborder="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="our-skill" id="sec3">
+            <h2>Наши преимущества</h2>
+            <article class="skill-bl">
+                <h3>Вкусная еда!</h3>
+                <div class="slider">
+                    <div class="sl-wrapper">
+                        <div class="sl-container">
+                            <img src="images/slides/01.jpg" alt="">
+                            <img src="images/slides/02.jpg" alt="">
+                            <img src="images/slides/03.jpg" alt="">
+
+                            <img src="images/slides/04.jpg" alt="">
+                            <img src="images/slides/05.jpg" alt="">
+                            <img src="images/slides/06.jpg" alt="">
+                            <img src="images/slides/07.jpg" alt="">
+                            <img src="images/slides/08.jpg" alt="">
+                            <img src="images/slides/09.jpg" alt="">
+                            <img src="images/slides/10.jpg" alt="">
+                            <img src="images/slides/11.jpg" alt="">
+                            <img src="images/slides/12.jpg" alt="">
+                            <img src="images/slides/13.jpg" alt="">
+                            <img src="images/slides/14.jpg" alt="">
+                            <img src="images/slides/15.jpg" alt="">
+                        </div>
+                    </div>
+                    <a href="#left" class="arrow-left"></a>
+                    <a href="#right" class="arrow-right"></a>
+                </div>
+                <p>Оригинальные рецепты с технологией приготовления из свежих, натуральных продуктов позволяют сделать вкус наших блюд притягательными и незабываемо вкусными. Приходите попробовать это лично.</p>
+                <a href="#n" class="button-t1">Вкусно поесть</a>
+            </article>
+            <article class="skill-bl">
+                <h3>Чистая и уютная обстановка</h3>
+                <div class="slider">
+                    <div class="sl-wrapper">
+                        <div class="sl-container">
+                            <img src="images/slides/04.jpg" alt="">
+                            <img src="images/slides/05.jpg" alt="">
+                            <img src="images/slides/06.jpg" alt="">
+                            <img src="images/slides/01.jpg" alt="">
+                            <img src="images/slides/02.jpg" alt="">
+                            <img src="images/slides/03.jpg" alt="">
+                            <img src="images/slides/07.jpg" alt="">
+                            <img src="images/slides/08.jpg" alt="">
+                            <img src="images/slides/09.jpg" alt="">
+                            <img src="images/slides/10.jpg" alt="">
+                            <img src="images/slides/11.jpg" alt="">
+                            <img src="images/slides/12.jpg" alt="">
+                            <img src="images/slides/13.jpg" alt="">
+                            <img src="images/slides/14.jpg" alt="">
+                            <img src="images/slides/15.jpg" alt="">
+                        </div>
+                    </div>
+                    <a href="#left" class="arrow-left"></a>
+                    <a href="#right" class="arrow-right"></a>
+                </div>
+                <p>Мы следим за тем, чтобы вам было комфортно и интересно у нас. Открытая кухня делает весь процесс приготовления увлекательным и необычным. Чистое и просторное помещение нашего заведения заметно даже с улицы. Зайдите убедиться в этом лично.</p>
+                <a href="#n" class="button-t1">Уютно посидеть</a>
+            </article>
+            <article class="skill-bl">
+                <h3>Гостеприимство</h3>
+                <div class="slider">
+                    <div class="sl-wrapper">
+                        <div class="sl-container">
+                            <img src="images/slides/07.jpg" alt="">
+                            <img src="images/slides/08.jpg" alt="">
+                            <img src="images/slides/09.jpg" alt="">
+
+                            <img src="images/slides/01.jpg" alt="">
+                            <img src="images/slides/02.jpg" alt="">
+                            <img src="images/slides/03.jpg" alt="">
+                            <img src="images/slides/04.jpg" alt="">
+                            <img src="images/slides/05.jpg" alt="">
+                            <img src="images/slides/06.jpg" alt="">
+                            <img src="images/slides/10.jpg" alt="">
+                            <img src="images/slides/11.jpg" alt="">
+                            <img src="images/slides/12.jpg" alt="">
+                            <img src="images/slides/13.jpg" alt="">
+                            <img src="images/slides/14.jpg" alt="">
+                            <img src="images/slides/15.jpg" alt="">
+                        </div>
+                    </div>
+                    <a href="#left" class="arrow-left"></a>
+                    <a href="#right" class="arrow-right"></a>
+                </div>
+                <p>Мы всегда встречаем вас с улыбкой и с желанием быть вам полезными. Нам важен каждый ваш визит. Загляните к нам за хорошим настроением.</p>
+                <a href="#n" class="button-t1">Заглянуть на огонек</a>
+            </article>
+            <article class="skill-bl">
+                <h3>Скорость приготовления</h3>
+                <div class="slider">
+                    <div class="sl-wrapper">
+                        <div class="sl-container">
+                            <img src="images/slides/10.jpg" alt="">
+                            <img src="images/slides/11.jpg" alt="">
+                            <img src="images/slides/12.jpg" alt="">
+
+                            <img src="images/slides/01.jpg" alt="">
+                            <img src="images/slides/02.jpg" alt="">
+                            <img src="images/slides/03.jpg" alt="">
+                            <img src="images/slides/04.jpg" alt="">
+                            <img src="images/slides/05.jpg" alt="">
+                            <img src="images/slides/06.jpg" alt="">
+                            <img src="images/slides/07.jpg" alt="">
+                            <img src="images/slides/08.jpg" alt="">
+                            <img src="images/slides/09.jpg" alt="">
+                            <img src="images/slides/13.jpg" alt="">
+                            <img src="images/slides/14.jpg" alt="">
+                            <img src="images/slides/15.jpg" alt="">
+                        </div>
+                    </div>
+                    <a href="#left" class="arrow-left"></a>
+                    <a href="#right" class="arrow-right"></a>
+                </div>
+                <p>Наши повара мастерски приготовят за считаные минуты любимые блюда. А ожидание будет увлекательным для вас, когда все будет готовиться прямо у вас на глазах. Приходите посмотреть на это.</p>
+                <a href="#n" class="button-t1">Быстро перекусить</a>
+            </article>
+            <article class="skill-bl">
+                <h3>Приемлемая стоимость</h3>
+                <div class="slider">
+                    <div class="sl-wrapper">
+                        <div class="sl-container">
+                            <img src="images/slides/13.jpg" alt="">
+                            <img src="images/slides/14.jpg" alt="">
+                            <img src="images/slides/15.jpg" alt="">
+
+                            <img src="images/slides/01.jpg" alt="">
+                            <img src="images/slides/02.jpg" alt="">
+                            <img src="images/slides/03.jpg" alt="">
+                            <img src="images/slides/04.jpg" alt="">
+                            <img src="images/slides/05.jpg" alt="">
+                            <img src="images/slides/06.jpg" alt="">
+                            <img src="images/slides/07.jpg" alt="">
+                            <img src="images/slides/08.jpg" alt="">
+                            <img src="images/slides/09.jpg" alt="">
+                            <img src="images/slides/10.jpg" alt="">
+                            <img src="images/slides/11.jpg" alt="">
+                            <img src="images/slides/12.jpg" alt="">
+                        </div>
+                    </div>
+                    <a href="#left" class="arrow-left"></a>
+                    <a href="#right" class="arrow-right"></a>
+                </div>
+                <p>Чек на гостя в среднем составляет от 200 рублей. А с картой Stark’s вы сделаете стоимость любимых блюд и напитков еще доступнее и выгоднее. Приходите к нам всей семьей и убедитесь в этом.</p>
+                <a href="#n" class="button-t1">Выгодно накопить</a>
+            </article>
+        </section>
+        <section class="about-us" id="sec4">
+            <h2>О ресторане</h2>
+            <p>„Stark’s - вкус мечты!” это сеть ресторанов быстрого питания с высоким стандартом качества и обслуживания. В городе Красноярск, первый ресторан Star Kebab открылся 14 декабря 2014 года на ул. Республики, 44 и вскоре новый ресторан откроет свои прозрачные двери для любымых красноярцев.</p>
+            <p>Основной принцип ресторана является открытый процесс приготовления пищи, используя только натуральные продукты. В Stark’s - вы можете наблюдать за всем процессом приготовления, а также подобрать ингредиенты по вкусу и вашим предпочтениям.</p>
+        </section>
+        <section class="route" id="sec5">
+            <h2>Схема проезда</h2>
+            <div class="route-map">
+                <div class="adress-label">
+                    <div class="logo"></div>
+                    <address>
+                        <p class="street st1">ул. Маерчака, 8</p>
+                        <p class="street st2">ул. Республики, 44</p>
+                        <p class="tell">+7(391) 200-200-7</p>
+                    </address>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--[if lt IE 9]>
+        <script src="js/polyfill_only_ie8.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.groupinputs.min.js"></script>
+    <script src="js/main_js.js"></script>
+</body>
+</html>

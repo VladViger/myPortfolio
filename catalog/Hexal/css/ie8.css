@@ -1,0 +1,23 @@
+.main-header a {
+    margin-right: 1.6em;
+}
+
+.hexa-row + .hexa-row {
+    margin-top: 0;
+}
+
+.hexa-row  {
+    margin-bottom: 10px;
+}
+
+.hexa-row > * {
+    margin-right: 10px;
+}
+
+figure.hexa-bg figcaption {
+    background-color: #ccc;
+}
+
+form[name="userContact"] {
+    margin-right: 220px;
+}
