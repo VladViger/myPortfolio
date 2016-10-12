@@ -1,10 +1,10 @@
 @font-face {
     font-family: "Comfortaa";
-    src: url("../fonts/ComfortaaBold/ComfortaaBold.eot");
+    src: url("../fonts/ComfortaaBold.eot");
     src: local("Comfortaa Bold"), local("ComfortaaBold"), local("Comfortaa-Bold"),
-        url("../fonts/ComfortaaBold/ComfortaaBold.eot?#iefix")format("embedded-opentype"),
-        url("../fonts/ComfortaaBold/ComfortaaBold.woff") format("woff"),
-        url("../fonts/ComfortaaBold/ComfortaaBold.ttf") format("truetype");
+        url("../fonts/ComfortaaBold.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/ComfortaaBold.woff") format("woff"),
+        url("../fonts/ComfortaaBold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -313,12 +313,6 @@ body > .thumb-img {     /* for js animation */
     .footer-site .copyright {
         border-right: none;
         box-shadow: none;
-    }
-}
-
-@media (max-width: 847px) and (min-width: 620px) {
-    .site-name .nr {
-        margin-left: 96px;
     }
 }
 
