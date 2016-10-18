@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/beer.ico" type="image/x-icon">
+    <title>Fucking life...</title>
+</head>
+<body>
+    <div class="bg-img">
+        <div class="day-wrap">
+            <span>DAYS:</span>
+            <span class="day" id="day">--</span>
+        </div>
+        <div class="hours-wrap">
+            <span>HOURS:</span>
+            <span class="hours" id="hours">--</span>
+        </div>
+        <div class="min-wrap">
+            <span>MINUTES:</span>
+            <span class="min" id="minutes">--</span>
+        </div>
+    </div>
+    <script>
+        function openingDateCounter(endYear, endMonth, endDate, endHour, endMin, endSec) {
+            var openingDate = new Date();
+            openingDate.setFullYear(endYear);
+            openingDate.setMonth(endMonth - 1);
+            openingDate.setDate(endDate);
+            openingDate.setHours(endHour);
+            openingDate.setMinutes(endMin);
+            openingDate.setSeconds(endSec);
+
+            var elemDays = document.getElementById('day');
+            var elemHours = document.getElementById('hours');
+            var elemMin = document.getElementById('minutes');
+
+            function dualNumb(arg) {
+                if (arg < 10) return false;
+                return true;
+            }
+
+            function counting() {
+                var nowDate = new Date();
+                var diff, diffDays, diffHours, diffMin, diffSec;
+
+                diff = (openingDate - nowDate)/1000;
+                if (diff < 0) {
+                    clearInterval(timerId);
+                    return;
+                }
+
+                diffDays = Math.floor(diff/86400);
+                diffHours = Math.floor( (diff - diffDays*86400)/3600 );
+                diffMin = Math.floor( (diff- diffDays*86400 - diffHours*3600)/60 );
+
+                dualNumb(diffDays) ? 
+                    elemDays.innerHTML = diffDays : elemDays.innerHTML = '0' + diffDays;
+
+                dualNumb(diffHours) ? 
+                    elemHours.innerHTML = diffHours : elemHours.innerHTML = '0' + diffHours;
+
+                dualNumb(diffMin) ? 
+                    elemMin.innerHTML = diffMin : elemMin.innerHTML = '0' + diffMin;
+            }
+
+            var timerId = setInterval( function() {counting()}, 500);
+        }
+
+        openingDateCounter(2016, 09, 23, 16, 31, 0);
+    </script>
+</body>
+</html>

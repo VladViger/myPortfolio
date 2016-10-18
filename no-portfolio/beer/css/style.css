@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Keania One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Keania One'), 
+        url(https://fonts.gstatic.com/s/keaniaone/v4/Xs0xx5kHUREmTXw6nnDuCvk_vArhqVIZ0nv9q090hN8.woff2) format('woff2'),
+        url(../fonts/Keania_One.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #191013;
+}
+
+.bg-img {
+    margin: 0 auto;
+    position: relative;
+    background: url(../images/bg_0.2_kr.jpg) no-repeat 50% 0%;
+    background-size: cover;
+    height: 930px;
+    width: 1280px;
+}
+
+.day-wrap,
+.hours-wrap,
+.min-wrap {
+    letter-spacing: 0.2em;
+    font-family: 'Keania One', Arial, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    opacity: 0.85;
+    position: absolute;
+    text-shadow: 0 1px 3px #fff, 0 -1px 3px #fff;
+}
+
+.day-wrap .day,
+.hours-wrap .hours,
+.min-wrap .min {
+    font-size: 26px;
+    text-shadow: 1px 1px 3px #fff, -1px -1px 3px #fff;
+}
+
+.day-wrap {
+    top: 400px;
+    left: 118px;
+    transform: rotate(-25deg);
+}
+
+.hours-wrap {
+    top: 300px;
+    left:260px;
+    transform: rotate(33deg);
+}
+
+.min-wrap {
+    top: 427px;
+    left:315px;
+}
