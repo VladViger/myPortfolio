@@ -33,7 +33,7 @@ function mixingAnim(target) {
 	trackCoords.startPoint = getCoords(fantomImg);
 	trackCoords.endPoint = getCoords(target);
 
-// move fantomImg
+	// move fantomImg
 	document.body.appendChild(fantomImg);
 
 	fantomImg.style.right = fantomImg.style.bottom = 'auto';
@@ -45,17 +45,17 @@ function mixingAnim(target) {
 		fantomImg.style.left = trackCoords.endPoint.left + 'px';
 	}, 20);
 
-// clear fantomImg
+	// clear fantomImg
 	setTimeout(function(){
 		fantomImg.style.cssText = '';
 		fantomParent.appendChild(fantomImg);
 	}, 900);
 
-//cut old .review and insert
+	//cut old .review and insert
 	mainBlock.insertBefore(oldReview, cutPoint);
 	oldReview.className = 'thumb-bl';
 
-//new .review
+	//new .review
 	mainBlock.insertBefore(target, mainBlock.firstElementChild);
 	target.className = 'review marg-shift';
 
@@ -78,6 +78,11 @@ mainBlock.onclick = function(event) {
 
 
 /* fix background short img */
-if (document.body.scrollHeight > 1200) {
-	document.body.style.backgroundAttachment = 'fixed';
+function change_orientation() {
+	if (document.body.scrollHeight > 1200) {
+		document.body.style.backgroundAttachment = 'fixed';
+	}
 }
+
+change_orientation();
+window.addEventListener('orientationchange', change_orientation);
