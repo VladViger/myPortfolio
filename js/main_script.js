@@ -1,3 +1,4 @@
+'use strict'
 var mainBlock = document.querySelector('.main-block');
 
 
@@ -78,11 +79,16 @@ mainBlock.onclick = function(event) {
 
 
 /* fix background short img */
-function change_orientation() {
+function bgFix() {
 	if (document.body.scrollHeight > 1200) {
 		document.body.style.backgroundAttachment = 'fixed';
+		document.body.style.backgroundPosition = '50% 0';
+	} else {
+		document.body.style = '';
 	}
+	console.log(document.body.scrollHeight);
 }
 
-change_orientation();
-window.addEventListener('orientationchange', change_orientation);
+
+bgFix();
+window.addEventListener('orientationchange', bgFix);
