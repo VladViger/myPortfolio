@@ -1,16 +1,12 @@
-'use strict'
 var mainBlock = document.querySelector('.main-block');
-
 
 function getCoords(elem) {
 	var box = elem.getBoundingClientRect();
-
 	return {
 		top: box.top + pageYOffset,
 		left: box.left + pageXOffset
 	};
 }
-
 
 function mixing(target) {
 	var cutPoint = target.nextElementSibling;
@@ -22,7 +18,6 @@ function mixing(target) {
 	mainBlock.insertBefore(target, mainBlock.firstElementChild);
 	target.className = 'review';
 }
-
 
 function mixingAnim(target) {
 	var cutPoint = target.nextElementSibling;
@@ -63,20 +58,16 @@ function mixingAnim(target) {
 	setTimeout(function(){ target.className = 'review' }, 20);
 }
 
-
 var sUsrAg = navigator.userAgent;
 var windWidth;
-
 
 mainBlock.onclick = function(event) {
 	var target = event.target;
 	if (target.className != 'thumb-bl') return;
 
 	windWidth = document.documentElement.clientWidth;
-
 	(windWidth < 620 || sUsrAg.indexOf('MSIE 9.0') > -1) ? mixing(target) : mixingAnim(target);
 }
-
 
 /* fix background short img */
 function bgFix() {
@@ -86,9 +77,7 @@ function bgFix() {
 	} else {
 		document.body.style = '';
 	}
-	console.log(document.body.scrollHeight);
 }
-
 
 bgFix();
 window.addEventListener('orientationchange', bgFix);
