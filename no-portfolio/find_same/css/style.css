@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+/*
+	reset style
+*/
+html,
+body,
+h1,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+	global
+*/
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	padding-bottom: 60px;
+	font-size: 16px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	line-height: 1.4;
+	background-color: #FCFCFC;
+	color: #121212;
+}
+
+/*
+	info block
+*/
+.info-field {
+	margin: 0 auto;
+	padding: 12px 0;
+	text-align: center;
+}
+
+.sign-board {
+	font-size: 32px;
+}
+
+/*
+	field of play
+*/
+.play-field {
+	transition: opacity 2s linear 0s;
+}
+
+.play-field.go-out {
+	opacity: 0;
+}
+
+.play-field img {
+	display: block;
+	width: 96px;
+	height: 96px;
+}
+
+.play-field table {
+	margin: 0 auto;
+	border: 2px solid #121212;
+}
+
+.play-field td {
+	position: relative;
+	padding: 0;
+}
+
+.play-field td::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #121212;
+	cursor: pointer;
+	transition: background 0.3s ease 0s;
+}
+
+.play-field td.hidden::before {
+	background-color: #FCFCFC;
+	cursor: default;
+}
+
+.play-field td.visible::before {
+	background-color: transparent;
+}
+
+/*
+	footer
+*/
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	font-size: 14px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #EFEFEF;
+}
+
+.footer a {
+	color: inherit;
+}
