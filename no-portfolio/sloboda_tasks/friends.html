@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Friends</title>
+</head>
+<body>
+	<script>
+		/**
+		 * Sloboda task #1 - "Candies"
+		 * Calculate how many different versions of gifts fit in the Santa's bag
+		 *
+		 * @param {integer} x - Weight of a candy
+		 * @param {integer} y - Weight of a tangerine 
+		 * @param {integer} z - Weight of a apple
+		 * @param {integer} w - Weight that you can hold the Santa's bag
+		 * @return {integer} The number of different gifts
+		*/
+		function calcGifts(x, y, z, w) {
+			var diffGifts;
+			var rest = w;
+			// calc how many can fit three different gifts
+			diffGifts = Math.floor( rest/(x+y+z) )*3;
+			rest = rest%(x+y+z);
+
+			// calc how many can fit two smaller different gifts
+			diffGifts += Math.floor( rest/(x+y+z - Math.max(x,y,z)) )*2;
+			rest = rest%(x+y+z - Math.max(x,y,z));
+
+			// in the bag could remain a place for one more gift
+			// check it, and if this is - add one small gift
+			if (rest > Math.min(x,y,z)) diffGifts++;
+			return diffGifts;
+		}
+
+
+		/**
+		 * Sloboda task #2 - "Secretary Jeniffer"
+		 * Calculate the minimum time required for the preparation of N copies
+		 *
+		 * @param {integer} n - Number of required copies
+		 * @param {integer} x - Time copy in seconds from the first xerox
+		 * @param {integer} y - Time copy in seconds from the second xerox
+		 * @return {integer} Full necessary time in seconds
+		*/
+		function copySpeedTest(n, x, y) {
+			// calculate maximum copies per second and minimum time to do it
+			var maxSpeed = 1/x + 1/y;
+			var minTime = (n-1)/maxSpeed + Math.min(x, y);
+
+			// we can not get a copy partially from two xeroxes
+			// so, we round time for xerox which will make it faster
+			var roundTime = Math.ceil(minTime);
+			while (roundTime%x && roundTime%y) {
+				roundTime++;
+			}
+
+			return roundTime;
+		}
+
+
+		/**
+		 * Sloboda task #3 - "Sloboda friends"
+		 * Calculate the number of friends of the specific person
+		 *
+		 * @param {integer} people - Number of people in the company
+		 * @param {integer} person - A specific number of person
+		 * @param {array} matrix - Contains subarrays consisting of ones and zeros
+		 * @return {integer} Number of friends of the person with the specific number
+		*/
+		function friendsCalc(people, person, matrix) {
+			// here we will keep people who are already friends of our person
+			var checkedFriends = [];
+			var friendsCounter = 0;
+
+			_friendsSum(people, person, matrix);
+
+			// declare a function for a recursive call
+			function _friendsSum(people, person, matrix) {
+
+				// people consider starting with one, but JS array starting from zero
+				var s = person - 1;
+				checkedFriends.push(s);
+
+				for (var i = 0; i < people; i++) {
+
+					if (matrix[s][i]
+						&& matrix[s][i] == matrix[i][s]
+						&& checkedFriends.indexOf(i) == -1)
+					{
+						// if this is a new friend - count him
+						// and find his friends
+						friendsCounter++;
+						_friendsSum(people, i + 1, matrix);
+					}
+				}
+			}
+
+			return friendsCounter;
+		}
+
+
+		/**
+		 * Examples.
+		 * You may see results in your browser console
+		*/
+
+		// Task #1. Example #1
+		console.log(
+			'Task #1 Example #1 Result:\n' +
+			calcGifts(10, 25, 15, 40)
+		);
+
+		// Task #2. Example #1
+		console.log(
+			'\nTask #2 Example #1 Result:\n' +
+			copySpeedTest(4, 1, 1)
+		);
+
+		// Task #2. Example #2
+		console.log(
+			'\nTask #2 Example #2 Result:\n' +
+			copySpeedTest(5, 1, 2)
+		);
+
+		// Task #3. Example #1
+		var MATRIX_1 = [
+			[0, 1, 0],
+			[1, 0, 1],
+			[0, 1, 0]
+		];
+
+		console.log(
+			'\nTask #3 Example #1 Result:\n' +
+			friendsCalc(3, 1, MATRIX_1)
+		);
+
+		// Task #3. Example #2
+		var MATRIX_2 = [
+			[0, 0, 0, 0, 0],
+			[0, 0, 1, 0, 0],
+			[0, 1, 0, 0, 1],
+			[0, 0, 0, 0, 1],
+			[0, 0, 1, 1, 0]
+		];
+
+		console.log(
+			'\nTask #3 Example #2 Result:\n' +
+			friendsCalc(5, 2, MATRIX_2)
+		);
+	</script>
+</body>
+</html>
