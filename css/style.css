@@ -29,6 +29,10 @@ a {
 	outline: none;
 }
 
+dl a {
+	color: inherit;
+}
+
 img {
 	border: none;
 }
